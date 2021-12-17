@@ -1,0 +1,18 @@
+<nav mat-tab-nav-bar>
+    <a mat-tab-link [routerLink]="['/Shop']" routerLinkActive="router-link-active"> Shop </a>
+    <a *ngIf="userRole === 'Admin' && status" mat-tab-link [routerLink]="['/Admin']"
+        routerLinkActive="router-link-active">
+        Manage Shop
+    </a>
+    <h1 *ngIf="status">Welcome {{userName}}</h1>
+    <div class="userArea">
+
+        <a *ngIf="status" (click)="logout()" mat-tab-link [routerLink]="['/Login']"
+            routerLinkActive="router-link-active"> Logout
+        </a>
+        <a *ngIf="!status" mat-tab-link [routerLink]="['/Register']" routerLinkActive="router-link-active"> Register
+        </a>
+        <a *ngIf="!status" mat-tab-link [routerLink]="['/Login']" routerLinkActive="router-link-active"> Login </a>
+
+    </div>
+</nav>

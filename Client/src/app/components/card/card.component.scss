@@ -1,0 +1,57 @@
+.cardContainer{
+    width: 250px;
+    height: 250px;
+    font-style: oblique;
+    background-color: white;
+    margin: 15px;
+    font-weight: 800;
+    color: #06244e;
+}
+.cardContainer:hover{
+    width: 250px;
+    height: 250px;
+    font-style: oblique;
+    background-color: white;
+    margin: 15px;
+    border: solid orange 1px;
+}
+img{
+    width: 120px;
+    height: 120px;
+    margin-left: 60px;
+    margin-top: 10%;
+}
+h2{
+    text-align: center;
+    margin-top: 10px;
+}
+h1{
+    margin-left: 15px;
+    font-size: 1.3em;
+}
+input{
+    height: 27px;
+    width: 33px;
+    font-size: 18px;
+
+}
+.addToCartButton{
+    background-color: white;
+    color: #041e42;
+    border: transparent;
+    margin-bottom: 11px;
+    //margin-right: auto;
+}
+.bottomCard{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.inputArea{
+    margin-right: 15px;
+}
+.material-icons { 
+    font-size: 32px;
+    margin-top: 0px;
+ }

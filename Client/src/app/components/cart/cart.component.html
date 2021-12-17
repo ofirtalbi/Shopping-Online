@@ -1,0 +1,32 @@
+<div class="cartContainer">
+    <div class="cartHeader">
+        <h2 *ngIf="store.length==0">Your cart is empty</h2>
+        <h2 *ngIf="store.length>0">Shopping Cart</h2>
+    </div>
+    <div class="cart">
+
+
+        <mat-list #items>
+            <mat-list-item *ngFor="let item of store">
+                <div class="itemRow">
+                    <span class="itemName">{{item.quantity}} {{item.name}}</span><button (click)="removeFromCart(item)"
+                        class="removeItemButton">
+                        <span class="material-icons">
+                            clear
+                        </span></button>
+
+                </div>
+            </mat-list-item>
+        </mat-list>
+
+        <div class="cartBot">
+            <h2 class="total">Total: {{cartTotal()}}&#8362;</h2>
+            <div class="cartBotButtons">
+                <button mat-stroked-button class="clearCartButton" (click)="clearCart()">Clear Cart</button>
+                <button mat-stroked-button [disabled]="disabledButton()" class="checkoutButton" type="submit"
+                    (click)="checkout()">Checkout</button>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="cardContainer">
+    <img src="{{Product.picture}}">
+    <h2>{{Product.productName}}</h2>
+    <div class="bottomCard">
+        <h1>{{Product.price}}&#8362;</h1>
+        <input type="number" min="1" value="1" oninput="this.value = Math.abs(this.value)" #quantity>
+        <button class="addToCartButton" (click)="newProduct(Product.productName,Product.price, quantity.value)">
+            <span class="material-icons">
+                shopping_cart
+            </span></button>
+    </div>
+</div>

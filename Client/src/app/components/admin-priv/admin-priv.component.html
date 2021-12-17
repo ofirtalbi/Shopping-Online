@@ -1,0 +1,112 @@
+<div class="mainContainer">
+  <h1>Add New Product</h1>
+  <div class="addProduct">
+    <mat-form-field appearance="outline">
+      <mat-label>Product Name</mat-label>
+      <input
+        matInput
+        type="text"
+        name="name"
+        [(ngModel)]="newProduct.productName"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Category Name</mat-label>
+      <mat-select [(ngModel)]="newProduct.category">
+        <mat-option *ngFor="let cat of categories" [value]="cat">
+          {{ cat }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product Price</mat-label>
+      <input
+        matInput
+        type="number"
+        name="price"
+        minlength="1"
+        max="99999"
+        [(ngModel)]="newProduct.price"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Image Link</mat-label>
+      <input
+        matInput
+        type="text"
+        name="image"
+        [(ngModel)]="newProduct.picture"
+      />
+    </mat-form-field>
+
+    <button
+      mat-stroked-button
+      class="submitButton"
+      type="submit"
+      (click)="addProduct()"
+    >
+      Add Product
+    </button>
+  </div>
+
+  <!----------------------------- Edit Product ----------------------------->
+  <h1>Edit Products</h1>
+  <div class="editProduct" *ngFor="let prod of Products">
+    <mat-form-field appearance="outline">
+      <mat-label>Product Name</mat-label>
+      <input matInput value="{{ prod.productName }}" #prodName type="text" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Category Name</mat-label>
+      <mat-select value="{{ prod.category }}" #prodCat>
+        <mat-option *ngFor="let cat of categories" [value]="cat">
+          {{ cat }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Product Price</mat-label>
+      <input
+        matInput
+        value="{{ prod.price }}"
+        #prodPrice
+        type="number"
+        name="price"
+        max="99999"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Image Link</mat-label>
+      <input
+        matInput
+        value="{{ prod.picture }}"
+        #prodPic
+        type="text"
+        name="image"
+      />
+    </mat-form-field>
+
+    <button
+      mat-stroked-button
+      class="submitButton"
+      type="submit"
+      (click)="
+        editProduct(
+          prod,
+          prodName.value,
+          prodCat.value,
+          prodPrice.value,
+          prodPic.value
+        )
+      "
+    >
+      Update Product
+    </button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="mainContainer">
+    <app-cart></app-cart>
+    <div class="shopContentContainer">
+        <mat-tab-group>
+            <mat-tab label="All">
+                <div class="cardContainer">
+                    <mat-form-field appearance="outline" [hideRequiredMarker]="'true'">
+                        <input matInput placeholder="Search Product" type="text" name="productQuery" #query
+                            [ngModel]="productQuery" (ngModelChange)="searchProduct(query.value)">
+                    </mat-form-field>
+                    <app-card *ngFor="let product of searchFilter" [Product]="product"></app-card>
+                </div>
+            </mat-tab>
+            <mat-tab *ngFor="let cat of categories">
+                <ng-template mat-tab-label>
+                    <div class="tabButton">{{cat}}</div>
+                </ng-template>
+                <div class="cardContainer">
+                    <app-card *ngFor="let product of filterProducts(cat)" [Product]="product"></app-card>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

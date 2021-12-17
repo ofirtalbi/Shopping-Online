@@ -1,0 +1,23 @@
+[{
+  "_id": "5656565656",
+  "shipments": [],
+  "role": "Admin",
+  "email": "ofirtalbi@gmail.com",
+  "password": "121212121212121",
+  "name": "Ofir",
+  "lastName": "Talbi",
+  "city": "Tel Aviv",
+  "street": "Bavli 11"
+},{
+  "_id": "5555555555",
+  "shipments": [
+    "13-12-2021"
+  ],
+  "email": "oril.p@hotmail.com",
+  "password": "111111111111111",
+  "city": "Tel Aviv",
+  "street": "penn15",
+  "name": "oril",
+  "lastName": "talbi",
+  "role": "user"
+}]

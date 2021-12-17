@@ -1,0 +1,27 @@
+form{
+     width: 40%;
+     height: 70%;
+     margin: auto;
+     margin-top: 100px;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+}
+
+mat-form-field{  
+     padding: 10px;
+     font-size: 20px;
+     width: 95%;
+ }
+
+ legend{
+     font-size: 18px;
+ }
+
+.loginButton{
+    background-color: #041e42;
+    color: rgb(209, 206, 206);
+    margin-left: 38%;
+    margin-bottom: 10px;
+    width: 20%;
+}

@@ -1,0 +1,38 @@
+.mainContainer{
+    display: flex;
+    background-color: #f0f3f9;
+    
+}
+mat-form-field{
+  width: 800px;
+  margin-left: 20px;
+  height: 50px;
+}
+
+.shopContentContainer{
+    width: 75%;
+    height: 100%;
+    margin-left: 400px
+}
+.cardContainer{
+   display: flex;
+   flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+}
+
+mat-tab-group{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  
+}
+mat-tab{
+align-content: center;
+}
+.tabButton{
+ font-weight: 800;
+}
+

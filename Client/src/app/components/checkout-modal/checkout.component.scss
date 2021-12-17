@@ -1,0 +1,62 @@
+.checkoutContainer{
+    width: 60%;
+    height: 520px;
+    background-color: rgb(230, 235, 247);
+    margin-left: 20%;
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    border: solid black 1px;
+}
+.Cart{
+    width: 45%;
+    height: 95%;
+    overflow-y: scroll;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+form{
+    width: 55%;
+    height: 100%;
+   display: flex;
+    justify-content: space-evenly;
+}
+.submitOrderButton{
+    background-color: #041e42;
+    color: rgb(209, 206, 206);
+    width: 50%;
+    margin-left: 25%;
+}
+ legend{
+    font-size: 18px;
+    width: auto;
+    height: auto;
+ }
+fieldset{
+    width: 100%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+mat-form-field{
+    width: 100%;
+
+}
+.orders{
+    width: 250px;
+    height: 250px;
+    border: black solid 1px;
+    margin-left: 75%;
+    background-color: rgb(230, 235, 247);
+}
+p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+h1{
+    margin-left: 30%;
+}
